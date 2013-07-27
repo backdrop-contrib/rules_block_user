@@ -1,4 +1,4 @@
-name = Rules Block/Unblock User Event
+name = Rules Block/Unblock User
 description = Adds an rule event for when a user is blocked or unblocked.
 core = 7.x
 package = Rules

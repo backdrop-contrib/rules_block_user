@@ -1,9 +1,14 @@
 <?php
 
 /**
+ * @file
+ * Adds an rule event for when a user is blocked or unblocked.
+ */
+
+/**
  * Implements hook_user_update().
  */
-function rules_event_block_user_user_update(&$edit, $account, $category) {
+function rules_block_user_user_update(&$edit, $account, $category) {
   // The original user object.
   $original = $edit['original'];
 
@@ -20,12 +25,12 @@ function rules_event_block_user_user_update(&$edit, $account, $category) {
 /**
  * Implements hook_rules_event_info().
  */
-function rules_event_block_user_rules_event_info() {
+function rules_block_user_rules_event_info() {
   // User was blocked.
   $items['user_was_blocked'] = array(
     'label' => t('After blocking a user'),
     'group' => t('User'),
-    'module' => 'rules_event_block_user',
+    'module' => 'rules_block_user',
     'variables' => array(
       'account' => array(
         'type' => 'user',
@@ -38,7 +43,7 @@ function rules_event_block_user_rules_event_info() {
   $items['user_was_unblocked'] = array(
     'label' => t('After unblocking a user'),
     'group' => t('User'),
-    'module' => 'rules_event_block_user',
+    'module' => 'rules_block_user',
     'variables' => array(
       'account' => array(
         'type' => 'user',
