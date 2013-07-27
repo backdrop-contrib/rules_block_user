@@ -1,5 +1,6 @@
 name = Rules Block/Unblock User
 description = Adds an rule event for when a user is blocked or unblocked.
 core = 7.x
+version = 7.x-1.0
 package = Rules
 dependencies[] = rules
