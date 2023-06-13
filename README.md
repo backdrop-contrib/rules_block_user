@@ -23,7 +23,7 @@ Configuration
 -------------
 
 - Visit the Rules configuration page at **Administration > Configuration >
- Workflow > Rules (`admin/config/workflow/rules`).
+ Workflow > Rules** (`admin/config/workflow/rules`).
 - Enable the rule "User account has been blocked" and/or the rule "User account
  has been unblocked".
 - Adjust the rule(s) as needed, e.g. add an action to send an email.
