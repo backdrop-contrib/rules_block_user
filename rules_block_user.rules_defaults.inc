@@ -5,16 +5,20 @@
  * Default rule configurations for rules_block_user.
  */
 
+/**
+ * @todo Document this function.
+ * @see https://docs.backdropcms.org/doc-standards
+ */
 function rules_block_user_default_rules_configuration() {
   $user_is_blocked = '{
     "user_has_been_blocked" : {
-      "LABEL" : "User has been blocked",
+      "LABEL" : "User account has been blocked",
       "PLUGIN" : "reaction rule",
       "ACTIVE" : false,
       "REQUIRES" : [ "rules", "rules_block_user" ],
       "ON" : [ "user_was_blocked" ],
       "DO" : [
-        { "drupal_message" : { "message" : "[account:name] has been blocked.", "repeat" : 0 } }
+        { "backdrop_message" : { "message" : "[account:name] has been blocked.", "repeat" : 0 } }
       ]
     }
   }';
@@ -22,13 +26,13 @@ function rules_block_user_default_rules_configuration() {
 
   $user_is_unblocked = '{
     "user_has_been_unblocked" : {
-      "LABEL" : "User has been unblocked",
+      "LABEL" : "User account has been unblocked",
       "PLUGIN" : "reaction rule",
       "ACTIVE" : false,
       "REQUIRES" : [ "rules", "rules_block_user" ],
       "ON" : [ "user_was_unblocked" ],
       "DO" : [
-        { "drupal_message" : { "message" : "[account:name] has been unblocked.", "repeat" : 0 } }
+        { "backdrop_message" : { "message" : "[account:name] has been unblocked.", "repeat" : 0 } }
       ]
     }
   }';
